@@ -1,0 +1,15 @@
+<div class="posts">
+    <div class="search">
+        <span class="p-float-label p-fluid">
+            <input id="float-input" type="text" pInputText [(ngModel)]="search" #searchSnaps="ngModel"
+            (keyup)="searchSnapshot(searchSnaps.value)"> 
+            <label for="float-input">Search</label>
+        </span>
+    </div>
+    <div class="grid">
+        <div class="col-12 md:col-6 lg:col-3" *ngFor="let post of posts | search: search;">
+            <app-post-card [post]="post"></app-post-card>
+        </div>
+    </div>
+    <p-paginator [rows]="limit" [totalRecords]="totalPosts" (onPageChange)="paginate($event)"></p-paginator>
+</div>

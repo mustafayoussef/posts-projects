@@ -1,0 +1,57 @@
+@import '../../../assets/scss/colors';
+
+.post-content {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+
+    .title {
+        font-size: 40px;
+        margin-bottom: 8rem;
+    }
+
+    .body {
+        font-size: 30px;
+    }
+
+    border-bottom: 1px solid #ffffff1a;
+
+}
+
+::ng-deep .tabs {
+    margin-top: .5rem;
+
+    .p-tabview-nav,
+    .p-tabview {
+        background-color: $bgColor;
+    }
+
+    .p-tabview-nav {
+        border: none;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+        background-color: $bgColorLight;
+
+    }
+
+    .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+        background-color: $bgColor;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .p-tabview-panels {
+        background-color: $bgColorLight;
+        color: $white;
+    }
+
+    .user {
+        color: #3B82F6;
+    }
+
+}

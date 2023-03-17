@@ -1,0 +1,27 @@
+@import '../../../../assets/scss/colors';
+
+::ng-deep .p-card .p-card-content {
+    padding: 0;
+}
+
+::ng-deep .p-card.p-component {
+    border-radius: 15px;
+    box-shadow: 0px 0px 6px 2px #ffffff1a;
+    background: transparent;
+
+    .p-card-body {
+
+        background-color: $bgColorLight;
+        border-radius: 10px;
+        border: 1px solid #ffffff1a;
+
+        .p-card-title {
+            color: cadetblue;
+        }
+
+        .body {
+            font-family: 'Acme', sans-serif;
+            color: burlywood;
+        }
+    }
+}

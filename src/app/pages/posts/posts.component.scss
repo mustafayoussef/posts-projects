@@ -1,0 +1,45 @@
+@import '../../../assets/scss/colors';
+
+.posts {
+    padding: 3rem 10rem;
+
+    ::ng-deep .p-paginator {
+        background-color: $bgColorLight;
+    }
+
+    .search {
+        margin: 1.5rem 0;
+        width: 25%;
+        margin-left: auto;
+
+        .p-inputtext {
+            background-color: $bgColorLight;
+            color: $white;
+
+            &:focus {
+                border: none;
+                box-shadow: none;
+            }
+        }
+
+        .p-float-label label {
+            color: $white;
+        }
+    }
+
+    @media screen and (min-width:320px) and (max-width:480px) {
+        padding: 0;
+
+        .search {
+            width: 100%;
+        }
+    }
+
+    @media screen and (min-width:481px) and (max-width:990px) {
+        padding: 3rem;
+
+        .search {
+            width: 100%;
+        }
+    }
+}

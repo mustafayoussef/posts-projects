@@ -1,0 +1,17 @@
+.posts {
+    padding: 3rem 10rem;
+
+    .name {
+        font-family: 'Acme', sans-serif;
+        color: antiquewhite;
+        font-size: 30px;
+    }
+
+    @media screen and (min-width:320px) and (max-width:480px) {
+        padding: 0;
+    }
+
+    @media screen and (min-width:481px) and (max-width:990px) {
+        padding: 3rem;
+    }
+}

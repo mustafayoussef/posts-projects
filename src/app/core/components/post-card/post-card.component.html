@@ -1,0 +1,7 @@
+<ng-container *ngIf="post">
+    <a [routerLink]="['/post',post.id]">
+        <p-card [header]="post.title | slice:0:25" [style]="{'margin-bottom': '2em'}">
+            <p class="body">{{post.body | slice:0:140}} ...</p>
+        </p-card>
+    </a>
+</ng-container>

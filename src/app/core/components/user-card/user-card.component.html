@@ -1,0 +1,9 @@
+<ng-container *ngIf="user">
+    <a [routerLink]="['/user',user.name,user.id]">
+        <p-card [header]="user.name" [style]="{'margin-bottom': '2em'}">
+            <p class="email">Email: {{user.email}}</p>
+            <p class="phone">Phone: {{user.phone}}</p>
+            <p class="company">Company: {{user.company.name}}</p>
+        </p-card>
+    </a>
+</ng-container>

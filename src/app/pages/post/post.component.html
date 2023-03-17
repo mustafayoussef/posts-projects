@@ -1,0 +1,24 @@
+<ng-container *ngIf="post">
+    <div class="post-content">
+        <h2 class="title">{{post.title}}</h2>
+        <p class="body">{{post.body}}</p>
+    </div>
+    <div class="tabs">
+        <p-tabView styleClass="tabview-custom">
+            <p-tabPanel header="Comments" leftIcon="pi pi-comments">
+                <div *ngFor="let comment of comments">
+                    <app-comment [comment]="comment"></app-comment>
+                </div>
+            </p-tabPanel>
+
+            <p-tabPanel header="Author" leftIcon="pi pi-user">
+                <p>Name:
+                    <a [routerLink]="['/user',user?.name,user?.id]" class="user">{{user?.name}}</a>
+                </p>
+                <p>phone: {{user?.phone}}</p>
+                <p>Company Name: {{user?.company?.name}}</p>
+            </p-tabPanel>
+        </p-tabView>
+    </div>
+    
+</ng-container>

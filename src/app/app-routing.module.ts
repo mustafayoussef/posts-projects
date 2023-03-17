@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { UserPostsComponent } from './pages/user-posts/user-posts.component';
 import { UsersComponent } from './pages/users/users.component';
 import { PostComponent } from './pages/post/post.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
   {path:'posts',component:PostsComponent},
   {path:'post/:id',component:PostComponent},
   {path:'users',component:UsersComponent},
-  {path:'user/:name/:id',component:UserPostsComponent}
+  {path:'user/:name/:id',component:UserPostsComponent},
+  {path:'**',component:NotFoundComponent}
 
 ];
 
